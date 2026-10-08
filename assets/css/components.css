@@ -1,0 +1,305 @@
+/* Reusable UI components. */
+
+/* ---- Card: cream panel inside a gold Art Deco double frame ---- */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6) var(--space-4);
+  text-align: center;
+  background: var(--color-surface);
+  border: 2px solid var(--color-gold);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: var(--frame-inset);
+  border: 1px solid var(--color-gold);
+  pointer-events: none;
+}
+
+.card__heading {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.card__heading--gold {
+  font-size: calc(var(--text-2xl) * 0.8);
+  font-weight: 500;
+  background: var(--color-gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card__script {
+  margin-bottom: calc(var(--space-3) * -1);
+  font-family: var(--font-script);
+  font-size: calc(var(--text-script) * 0.7);
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
+.card__text {
+  color: var(--color-text-muted);
+}
+
+.card__note {
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+/* ---- Ornamental divider: line · diamond · line ---- */
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  width: min(240px, 70%);
+  margin: 0 auto;
+}
+
+.ornament::before,
+.ornament::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+}
+
+.ornament::before {
+  background: linear-gradient(to right, transparent, var(--color-gold));
+}
+
+.ornament::after {
+  background: linear-gradient(to left, transparent, var(--color-gold));
+}
+
+.ornament__gem {
+  width: 9px;
+  height: 9px;
+  border: 1px solid var(--color-gold);
+  background: var(--color-gold-light);
+  transform: rotate(45deg);
+}
+
+/* ---- Form ---- */
+.checkin-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.input {
+  width: 100%;
+  min-height: var(--touch-target);
+  padding: 0 var(--space-3);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-text);
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.input::placeholder {
+  font-weight: 500;
+  font-style: italic;
+  color: var(--color-text-muted);
+  opacity: 0.7;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-gold-dark);
+  box-shadow: 0 0 0 3px rgba(185, 149, 97, 0.3);
+}
+
+.form-error {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-error);
+}
+
+/* ---- Buttons ---- */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: var(--touch-target);
+  padding: 0 var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  transition: filter var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.button--primary {
+  color: var(--color-bg);
+  background: var(--color-gold-gradient);
+  border-color: var(--color-gold-dark);
+}
+
+.button--primary:hover {
+  filter: brightness(1.08);
+}
+
+.button--ghost {
+  color: var(--color-gold-dark);
+  background: transparent;
+  border-color: var(--color-gold);
+}
+
+.button--ghost:hover {
+  background: rgba(185, 149, 97, 0.12);
+}
+
+/* ---- Match list ---- */
+.match-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.match-list__button {
+  width: 100%;
+  min-height: var(--touch-target);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.match-list__button:hover,
+.match-list__button:focus-visible {
+  border-color: var(--color-gold);
+  background: #fbf6ec;
+}
+
+/* ---- Family members on the welcome screen ---- */
+.family-list {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+}
+
+.family-list li {
+  padding: 2px 0;
+}
+
+/* ---- Table badge ---- */
+.table-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table-badge__label {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.table-badge__number {
+  font-size: var(--text-table);
+  font-weight: 600;
+  line-height: 0.9;
+  background: var(--color-gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---- Seating chart ---- */
+.seating-chart {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-2);
+  text-align: left;
+}
+
+.seating-table {
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.seating-table__heading {
+  margin: 0 0 var(--space-1);
+  padding-bottom: var(--space-1);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.seating-table__guests {
+  font-size: var(--text-base);
+}
+
+/* Separate family groups that share a table. */
+.seating-table__guests + .seating-table__guests {
+  margin-top: var(--space-1);
+  padding-top: var(--space-1);
+  border-top: 1px dashed var(--color-border);
+}
+
+.seating-table__guests li {
+  padding: 2px 0;
+}
+
+/* ---- Auto-reset countdown ---- */
+.countdown {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: rgba(185, 149, 97, 0.2);
+}
+
+.countdown__bar {
+  height: 100%;
+  width: 100%;
+  background: var(--color-gold-gradient);
+  transform-origin: left;
+}
+
+.countdown__bar.is-running {
+  animation: countdown linear forwards;
+  animation-duration: var(--countdown-duration, 15s);
+}
+
+@keyframes countdown {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#0b0907">
+  <title>Guest Check-In</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap">
+
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+
+  <script type="module" src="assets/js/main.js"></script>
+</head>
+<body>
+  <main class="app">
+    <header class="app__header" id="app-header">
+      <p class="app__eyebrow">Welcome to</p>
+      <h1 class="app__title">
+        <span class="app__title-main" id="event-name">Our Celebration</span>
+        <span class="app__title-script" id="event-accent" hidden></span>
+      </h1>
+    </header>
+
+    <!-- Screen: enter name -->
+    <section class="screen" id="screen-checkin" aria-labelledby="checkin-heading">
+      <div class="card">
+        <h2 class="card__heading" id="checkin-heading">Please check in</h2>
+        <div class="ornament" aria-hidden="true"><span class="ornament__gem"></span></div>
+        <p class="card__text">Enter your name to find your table.</p>
+
+        <form class="checkin-form" id="checkin-form" autocomplete="off" novalidate>
+          <label class="visually-hidden" for="guest-name">Your name</label>
+          <input
+            class="input"
+            id="guest-name"
+            name="guestName"
+            type="text"
+            placeholder="First and last name"
+            autocapitalize="words"
+            autocorrect="off"
+            spellcheck="false"
+            enterkeyhint="go"
+            required
+          >
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <button class="button button--primary" type="submit">Check In</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Screen: choose between several matches -->
+    <section class="screen" id="screen-select" aria-labelledby="select-heading" hidden>
+      <div class="card">
+        <h2 class="card__heading" id="select-heading">Which one is you?</h2>
+        <div class="ornament" aria-hidden="true"><span class="ornament__gem"></span></div>
+        <ul class="match-list" id="match-list"></ul>
+        <button class="button button--ghost" type="button" data-action="reset">Back</button>
+      </div>
+    </section>
+
+    <!-- Screen: welcome + table number -->
+    <section class="screen" id="screen-welcome" aria-labelledby="welcome-heading" aria-live="polite" hidden>
+      <div class="card">
+        <p class="card__script" aria-hidden="true">Welcome</p>
+        <h2 class="card__heading card__heading--gold" id="welcome-heading"></h2>
+        <ul class="family-list" id="welcome-family"></ul>
+        <div class="ornament" aria-hidden="true"><span class="ornament__gem"></span></div>
+
+        <div class="table-badge">
+          <span class="table-badge__label">Please be seated at table</span>
+          <span class="table-badge__number" id="welcome-table">–</span>
+        </div>
+
+        <p class="card__note" id="welcome-note" hidden></p>
+
+        <button class="button button--primary" type="button" data-action="reset">Done</button>
+        <div class="countdown" aria-hidden="true"><div class="countdown__bar"></div></div>
+      </div>
+    </section>
+
+    <!-- Screen: no match -->
+    <section class="screen" id="screen-notfound" aria-labelledby="notfound-heading" aria-live="polite" hidden>
+      <div class="card">
+        <h2 class="card__heading" id="notfound-heading">We couldn't find you</h2>
+        <div class="ornament" aria-hidden="true"><span class="ornament__gem"></span></div>
+        <p class="card__text" id="notfound-text">
+          Please check the spelling and try again, or ask a host for help.
+        </p>
+        <button class="button button--primary" type="button" data-action="reset">Try Again</button>
+        <button class="button button--ghost" type="button" data-action="seating-chart">View Seating Chart</button>
+        <div class="countdown" aria-hidden="true"><div class="countdown__bar"></div></div>
+      </div>
+    </section>
+
+    <!-- Screen: full seating chart, grouped by table -->
+    <section class="screen screen--wide" id="screen-seating" aria-labelledby="seating-heading" hidden>
+      <div class="card">
+        <h2 class="card__heading" id="seating-heading">Seating Chart</h2>
+        <div class="ornament" aria-hidden="true"><span class="ornament__gem"></span></div>
+        <p class="card__text">Find your name below to see your table.</p>
+        <div class="seating-chart" id="seating-chart"></div>
+        <button class="button button--primary" type="button" data-action="reset">Back to Check-In</button>
+      </div>
+    </section>
+
+    <!-- Screen: guest list failed to load -->
+    <section class="screen" id="screen-error" hidden>
+      <div class="card">
+        <h2 class="card__heading">Something went wrong</h2>
+        <div class="ornament" aria-hidden="true"><span class="ornament__gem"></span></div>
+        <p class="card__text">The guest list couldn't be loaded. Please ask a host for help.</p>
+        <button class="button button--primary" type="button" data-action="reload">Reload</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

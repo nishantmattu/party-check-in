@@ -1,0 +1,55 @@
+/*
+ * Design tokens — change these to re-theme the whole site.
+ * Palette and type follow the Mattu Gala invitation (mattugala.com):
+ * black and gold Art Deco, cream panels, serif capitals with a script accent.
+ */
+:root {
+  /* Colors */
+  --color-bg: #0b0907;
+  --color-bg-glow: rgba(185, 149, 97, 0.18);
+  --color-sparkle: rgba(221, 186, 118, 0.55);
+  --color-surface: #ece3d4;
+  --color-surface-raised: #f5efe4;
+  --color-text: #231f20;
+  --color-text-muted: #5f554a;
+  --color-gold: #b99561;
+  --color-gold-light: #ddba76;
+  --color-gold-dark: #8a6a35;
+  --color-gold-gradient: linear-gradient(135deg, #8a6a35 0%, #ddba76 45%, #b79048 70%, #8a6a35 100%);
+  --color-border: rgba(185, 149, 97, 0.45);
+  --color-focus: #ddba76;
+  --color-error: #8e2a22;
+
+  /* Typography */
+  --font-serif: "Cormorant Garamond", "Times New Roman", serif;
+  --font-script: "Great Vibes", cursive;
+  --text-xs: 0.875rem;
+  --text-sm: 1rem;
+  --text-base: 1.3rem;
+  --text-lg: 1.6rem;
+  --text-xl: 2.25rem;
+  --text-2xl: clamp(2.75rem, 7vw, 4rem);
+  --text-script: clamp(2.75rem, 7vw, 4rem);
+  --text-table: clamp(5.5rem, 18vw, 9rem);
+  --tracking-wide: 0.2em;
+  --tracking-wider: 0.32em;
+
+  /* Spacing */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-6: 3rem;
+
+  /* Shape & motion */
+  --radius-sm: 2px;
+  --frame-inset: 10px;
+  --shadow-card: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(185, 149, 97, 0.35);
+  --transition-fast: 150ms ease;
+  --transition-screen: 350ms ease;
+
+  /* Sizing */
+  --content-width: 580px;
+  --content-width-wide: 920px;
+  --touch-target: 64px;
+}

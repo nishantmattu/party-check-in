@@ -1,0 +1,29 @@
+{
+  "event": {
+    "name": "The Mattu",
+    "accent": "Gala"
+  },
+  "families": [
+    {
+      "table": 1,
+      "guests": ["Raj Sharma", "Priya Sharma", "Anika Sharma"]
+    },
+    {
+      "table": 2,
+      "guests": ["Vikram Patel", "Meera Patel"]
+    },
+    {
+      "table": 3,
+      "guests": ["Michael Johnson", "Sarah Johnson", "Emma Johnson", "Liam Johnson"]
+    },
+    {
+      "table": 3,
+      "guests": ["José García", "María García"],
+      "note": "Vegetarian meals have been arranged for your table."
+    },
+    {
+      "table": 4,
+      "guests": ["Arjun Singh", "Kavya Singh", "Priya Singh"]
+    }
+  ]
+}
