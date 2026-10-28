@@ -6,24 +6,177 @@
   "families": [
     {
       "table": 1,
-      "guests": ["Raj Sharma", "Priya Sharma", "Anika Sharma"]
+      "guests": ["Anil Bhat", "Meenakshi Bhat"]
+    },
+    {
+      "table": 1,
+      "guests": ["Adhir Mattu", "Meenu Mattu"]
+    },
+    {
+      "table": 1,
+      "guests": ["Jeff Reifers", "Jackie Reifers"]
+    },
+    {
+      "table": 1,
+      "guests": ["Lulu"]
+    },
+
+    {
+      "table": 2,
+      "guests": ["Vihaan Ganjoo"]
     },
     {
       "table": 2,
-      "guests": ["Vikram Patel", "Meera Patel"]
+      "guests": ["Mehak Ganju"]
+    },
+    {
+      "table": 2,
+      "guests": ["Varun Bhat", "Manveen Bhat", "Vidit Bhat"]
+    },
+    {
+      "table": 2,
+      "guests": ["Jayden Mattu", "Noah Mattu", "Rebecca Mattu", "Nishant Mattu"]
+    },
+    {
+      "table": 2,
+      "guests": ["Siya Mattu", "Shweta Panditrao", "Nikhil Mattu"]
+    },
+
+    {
+      "table": 3,
+      "guests": ["Sucheta Panditrao", "Shekhar Panditrao"]
     },
     {
       "table": 3,
-      "guests": ["Michael Johnson", "Sarah Johnson", "Emma Johnson", "Liam Johnson"]
+      "guests": ["Vedavati Kale", "Anant Kale"]
     },
     {
       "table": 3,
-      "guests": ["José García", "María García"],
-      "note": "Vegetarian meals have been arranged for your table."
+      "guests": ["Dorian Kisch", "Ray Kisch"]
+    },
+    {
+      "table": 3,
+      "guests": ["Abishek Ganjoo"]
+    },
+
+    {
+      "table": 4,
+      "guests": ["Manoj Rana", "Abhijay Rana", "Shachi Singh"]
     },
     {
       "table": 4,
-      "guests": ["Arjun Singh", "Kavya Singh", "Priya Singh"]
+      "guests": ["Ashish Ganju"]
+    },
+    {
+      "table": 4,
+      "guests": ["Arjun Sethi"]
+    },
+    {
+      "table": 4,
+      "guests": ["Mona", "Ryan Choudhry"]
+    },
+    {
+      "table": 4,
+      "guests": ["Rishi Choudhry"]
+    },
+
+    {
+      "table": 5,
+      "guests": ["Ankita Bhanot"]
+    },
+    {
+      "table": 5,
+      "guests": ["Sandipan Bhanot"]
+    },
+    {
+      "table": 5,
+      "guests": ["Utkarsh Guleri", "Swati Sharma", "Kavin Guleri", "Kriti Guleri"]
+    },
+    {
+      "table": 5,
+      "guests": ["Avi Agarwal", "Shipra Bhardwaj"]
+    },
+    {
+      "table": 5,
+      "guests": ["Yvonne Nachtigall"]
+    },
+
+
+    {
+      "table": 6,
+      "guests": ["Roopali Chaudhary", "Ajay Chaudhary"]
+    },
+    {
+      "table": 6,
+      "guests": ["Uma Puri", "Pardeep Puri"]
+    },
+    {
+      "table": 6,
+      "guests": ["Mahima Chaudhry", "Udey Chaudhry"]
+    },
+    {
+      "table": 6,
+      "guests": ["Anamika Chadha"]
+    },
+    {
+      "table": 6,
+      "guests": ["Rita Choudhry", "Rajan Choudhry"]
+    },
+  
+    {
+      "table": 7,
+      "guests": ["Mona Sethi", "Rajeev Sethi"]
+    },
+    {
+      "table": 7,
+      "guests": ["Jothi Viswanathan", "Shirish Paranjpe"]
+    },
+    {
+      "table": 7,
+      "guests": ["Pavani Prithviraj", "Prithvi Prithviraj"]
+    },
+    {
+      "table": 7,
+      "guests": ["Taru Gupta", "Sanjiv Gupta"]
+    },
+
+
+    {
+      "table": 8,
+      "guests": ["Harneet Kaur", "Varinder Pal Singh", "Raunauk"]
+    },
+    {
+      "table": 8,
+      "guests": ["Pankaj Tiwari", "Gagan Bassi", "Aira Tiwari", "Ayurya Tiwari"]
+    },
+    {
+      "table": 8,
+      "guests": ["Hanan Szwarcbord", "Ornit Szwarcbord"]
+    },
+    {
+      "table": 8,
+      "guests": ["Adjay"]
+    },
+
+    {
+      "table": 9,
+      "guests": ["Prakash Kota", "Sudha"]
+    },
+    {
+      "table": 9,
+      "guests": ["Shriya"]
+    },
+    {
+      "table": 9,
+      "guests": ["Hasmukh Ranjan", "Kobita Ranjan"]
+    },
+    {
+      "table": 9,
+      "guests": ["Nishit Sahay", "Prachi Tajnekar"]
+    },
+    {
+      "table": 9,
+      "guests": ["Vishal Parikh", "Priti"]
     }
   ]
 }
