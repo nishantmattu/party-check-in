@@ -63,9 +63,11 @@ export class GuestService {
 
     results.sort((a, b) => b.score - a.score || a.guest.name.localeCompare(b.guest.name));
 
-    // An exact full-name match wins outright.
+    // A typed full name (two or more words) that exactly matches a guest wins outright.
+    // A single word like "Mona" always lists every match, so a guest named just
+    // "Mona" doesn't hide "Mona Sethi".
     const best = results[0];
-    if (best && best.score >= 10 && results[1]?.score < 10) {
+    if (queryTokens.length > 1 && best?.score >= 10 && results[1]?.score < 10) {
       return [best.guest];
     }
 

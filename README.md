@@ -64,10 +64,12 @@ Edit [data/guests.json](data/guests.json):
 ES modules and `fetch` don't work from `file://`, so serve the folder:
 
 ```bash
-python3 -m http.server 8000
-# or
-npx serve .
+python3 serve.py
 ```
+
+`serve.py` tells browsers not to cache, so changes to the code or guest list show
+up on the next reload. (`python3 -m http.server` also works, but browsers may keep
+running old copies of the scripts.)
 
 Then open http://localhost:8000.
 
